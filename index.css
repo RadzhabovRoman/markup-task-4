@@ -1,0 +1,83 @@
+body
+{
+    background: #faebd7;
+}
+
+main
+{
+    text-align: center;
+    margin: 0 auto;
+    width: 71%;
+}
+
+.titleCat
+{
+    text-align: center;
+}
+
+.blockCat
+{
+    width: 300px;
+    height: auto;
+    border: 2px solid #5f9ea0;
+    display: inline-block;
+    text-align: left;
+    margin: 5px 20px 20px 10px;
+}
+
+.catImg
+{
+    width: 280px;
+    height: auto;
+    text-align: center;
+    margin: 5px 10px 10px;
+}
+
+.description
+{
+    margin: 5px 15px;
+}
+
+.description > p
+{
+    margin: 5px;
+}
+
+.catImg:hover
+{
+    transform: scale(1.05);
+    transition: all .3s linear;
+}
+
+h3:hover
+{
+    transform: scale(1.1);
+    transition: all .1s linear;
+}
+
+.blockCat:hover
+{
+    border: 2px solid #228b22;
+}
+
+ul > li:hover
+{
+    background: cadetblue;
+    margin-right: 35px;
+}
+
+input[class='list']:checked ~ main .blockCat
+{
+    display: block;
+    margin: 15px auto;
+}
+
+input[class='tile']:checked ~ main .description
+{
+    display: none;
+}
+
+input[class='list']:checked ~ main .listCat
+{
+    display: none;
+}
