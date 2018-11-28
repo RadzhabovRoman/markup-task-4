@@ -6,44 +6,56 @@ body
 main
 {
     text-align: center;
-    margin: 0 auto;
-    width: 71%;
 }
 
-.titleCat
+.head-tittle
 {
     text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
 }
 
-.blockCat
+.title-in-block
 {
-    width: 300px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.block-for-cat
+{
+    width: 380px;
     height: auto;
-    border: 2px solid #5f9ea0;
+    border: 1.5px solid darkslategray;
     display: inline-block;
     text-align: left;
-    margin: 5px 20px 20px 10px;
+    margin: 10px 25px;
 }
 
-.catImg
+.cat-img
 {
-    width: 280px;
+    width: 85%;
     height: auto;
     text-align: center;
-    margin: 5px 10px 10px;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    border: 1px solid gray;
 }
 
-.description
+.full-info > p
 {
-    margin: 5px 15px;
+    font-size: 30px;
+    display: block;
+    margin-top: 15px;
+    margin-left: 10px;
 }
 
-.description > p
+.full-info > p:first-child
 {
-    margin: 5px;
+    margin-top: 30px;
 }
 
-.catImg:hover
+.cat-img:hover
 {
     transform: scale(1.05);
     transition: all .3s linear;
@@ -55,29 +67,44 @@ h3:hover
     transition: all .1s linear;
 }
 
-.blockCat:hover
+.block-for-cat:hover
 {
-    border: 2px solid #228b22;
+    transform: scale(1.03);
+    transition: all .1s linear;
+    border: 2px solid #5f9ea0;
 }
 
-ul > li:hover
+.smart-info > li
+{
+    list-style-type: none;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.smart-info > li:hover
 {
     background: cadetblue;
     margin-right: 35px;
 }
 
-input[class='list']:checked ~ main .blockCat
+input[class='list']:checked ~ main .block-for-cat
 {
     display: block;
-    margin: 15px auto;
+    margin: 40px auto;
+    width: 55%;
 }
 
-input[class='tile']:checked ~ main .description
+input[class='list']:checked ~ main .title-in-block
+{
+    font-size: 34px;
+}
+
+input[class='tile']:checked ~ main .full-info
 {
     display: none;
 }
 
-input[class='list']:checked ~ main .listCat
+input[class='list']:checked ~ main .smart-info
 {
     display: none;
 }
